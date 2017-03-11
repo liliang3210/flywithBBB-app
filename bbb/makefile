@@ -56,7 +56,7 @@ all: flyWithMe
 flyWithMe: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	arm-linux-gnueabihf-g++ -L/usr/arm-linux-gnueabihf/lib -L/usr/arm-linux-gnueabihf/libsf -o "flyWithMe" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-linux-gnueabihf-g++ -L/usr/arm-linux-gnueabihf/lib -L/usr/arm-linux-gnueabihf/libsf -L/home/liliang/Downloads/boost_1_63_0/stage/lib -o "flyWithMe" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

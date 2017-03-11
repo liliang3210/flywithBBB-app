@@ -25,8 +25,9 @@ public:
         return &instance;
     }
 
-	void start();
+	bool start();
 	void setSpeed(Channel ch, double speed);
+	void setSpeed(double speed);
 
 private:
 	SpeedChange();
@@ -35,6 +36,7 @@ private:
 	BlackLib::BlackPWM *pwm2;
 	BlackLib::BlackPWM *pwm3;
 	BlackLib::BlackPWM *pwm4;
+	const double min_pw = 35.0;
 };
 
 #endif /* MIDDLEWARE_SPEEDCHANGE_H_ */
